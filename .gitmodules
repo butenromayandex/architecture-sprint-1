@@ -1,0 +1,15 @@
+[submodule "frontend/microfrontends/auth"]
+	path = frontend/microfrontends/auth
+	url = https://github.com/butenromayandex/auth.git
+[submodule "frontend/microfrontends/gallery"]
+	path = frontend/microfrontends/gallery
+	url = https://github.com/butenromayandex/gallery.git
+[submodule "frontend/microfrontends/main"]
+	path = frontend/microfrontends/main
+	url = https://github.com/butenromayandex/main.git
+[submodule "frontend/microfrontends/profile"]
+	path = frontend/microfrontends/profile
+	url = https://github.com/butenromayandex/profile.git
+[submodule "frontend/microfrontends/root"]
+	path = frontend/microfrontends/root
+	url = https://github.com/butenromayandex/root.git

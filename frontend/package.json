@@ -2,18 +2,20 @@
   "name": "web_canonicals_ru",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
-  },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "serve": "react-scripts --openssl-legacy-provider start",
+    "install-all": "npm-run-all --parallel install:*",
+    "install:root": "cd microfrontends/root && npm install",
+    "install:home": "cd microfrontends/main && npm install",
+    "install:auth": "cd microfrontends/auth && npm install",
+    "install:profile": "cd microfrontends/profile && npm install",
+    "install:gallery": "cd microfrontends/gallery && npm install",
+    "start": "npm-run-all --parallel start:*",
+    "start:root": "cd microfrontends/root && npm start",
+    "start:home": "cd microfrontends/main && npm start -- --port 8500",
+    "start:auth": "cd microfrontends/auth && npm start -- --port 8501",
+    "start:profile": "cd microfrontends/profile && npm start -- --port 8502",
+    "start:gallery": "cd microfrontends/gallery && npm start -- --port 8503",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "test:microfrontend": "npx jest ./index.spec.js",
@@ -41,6 +43,8 @@
     "@playwright/test": "^1.45.0",
     "@types/node": "^20.14.9",
     "dotenv": "^16.0.2",
+    "npm-run-all": "^4.1.5",
     "wait-port": "^1.1.0"
-  }
+  },
+  "packageManager": "pnpm@9.1.3+sha512.7c2ea089e1a6af306409c4fc8c4f0897bdac32b772016196c469d9428f1fe2d5a21daf8ad6512762654ac645b5d9136bb210ec9a00afa8dbc4677843ba362ecd"
 }
